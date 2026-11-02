@@ -351,13 +351,13 @@
   </header>
 
   <!-- Full-Width Cinematic Video Hero Section (Always Dark Green Background with Full Video) -->
-  <section id="home" class="hero-video-container relative w-full min-h-[85vh] lg:min-h-[92vh] flex items-center overflow-hidden bg-[#0e2b1b]" style="position: relative; width: 100%; min-height: 85vh; background-color: #0e2b1b; display: flex; align-items: center; overflow: hidden;">
+  <section id="home" class="hero-video-container relative w-full min-h-[80vh] lg:min-h-[88vh] flex items-center overflow-hidden bg-[#0e2b1b]" style="position: relative; width: 100%; min-height: 80vh; max-height: 920px; background-color: #0e2b1b; display: flex; align-items: center; justify-content: center; overflow: hidden;">
     
     <!-- Full-Width Background Video (Absolute Inset-0) -->
     <video 
       id="hero-bg-video"
       class="hero-video-element absolute inset-0 w-full h-full object-cover object-center z-0"
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;"
+      style="position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; z-index: 1; pointer-events: none;"
       poster="assets/hero-poster.jpg" 
       autoplay 
       muted 
@@ -369,29 +369,29 @@
     </video>
 
     <!-- Multi-Layer Scrim for High-Contrast Readability -->
-    <div class="hero-scrim absolute inset-0 z-10 pointer-events-none" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; background: linear-gradient(90deg, rgba(8, 28, 17, 0.90) 0%, rgba(14, 43, 27, 0.78) 50%, rgba(14, 43, 27, 0.52) 100%); pointer-events: none;"></div>
+    <div class="hero-scrim absolute inset-0 z-10 pointer-events-none" style="position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; z-index: 2; pointer-events: none; background: linear-gradient(90deg, rgba(8, 28, 17, 0.92) 0%, rgba(14, 43, 27, 0.82) 50%, rgba(14, 43, 27, 0.55) 100%);"></div>
 
     <!-- Background Subtle Nature Glows Superimposed over Video -->
     <div class="absolute -top-24 right-10 w-96 h-96 rounded-full bg-emerald-500/15 filter blur-3xl pointer-events-none z-10"></div>
     <div class="absolute bottom-10 left-10 w-80 h-80 rounded-full bg-emerald-700/20 filter blur-3xl pointer-events-none z-10"></div>
 
-    <!-- Foreground Content Directly Over Video -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full py-20 lg:py-28" style="position: relative; z-index: 10;">
-      <div class="max-w-3xl space-y-7">
+    <!-- Foreground Content Directly Over Video (Perfect Vertical Placement, Never Pushed Down) -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full py-10 sm:py-14 lg:py-16" style="position: relative; z-index: 10; margin-top: auto; margin-bottom: auto;">
+      <div class="max-w-3xl flex flex-col gap-6" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
         <!-- Superimposed Main Title: "Care for home. Peace of mind for you." -->
-        <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal text-white leading-[1.08] tracking-tight drop-shadow-md" style="color: #ffffff; text-shadow: 0 2px 14px rgba(0,0,0,0.65);">
+        <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal text-white leading-[1.08] tracking-tight drop-shadow-md" style="color: #ffffff; text-shadow: 0 2px 14px rgba(0,0,0,0.65); margin: 0;">
           Care for home.<br>
           <span class="italic text-[#f3ba77] font-normal">Peace of mind</span> for you.
         </h1>
 
         <!-- Supporting Narrative Copy -->
-        <p class="text-base sm:text-xl text-[#e2f0e7]/95 leading-relaxed font-normal max-w-2xl drop-shadow" style="color: #e2f0e7; text-shadow: 0 1px 8px rgba(0,0,0,0.5);">
+        <p class="text-base sm:text-xl text-[#e2f0e7]/95 leading-relaxed font-normal max-w-2xl drop-shadow" style="color: #e2f0e7; text-shadow: 0 1px 8px rgba(0,0,0,0.5); margin: 0;">
           Thousands of miles away shouldn’t mean being out of the loop. We help NRI families care for loved ones, protect property and manage life in India—with one accountable team by your side.
         </p>
 
         <!-- Glass & Solid CTAs Superimposed on Video -->
-        <div class="flex flex-wrap items-center gap-4 pt-2">
+        <div class="flex flex-wrap items-center gap-4 pt-1" style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; padding-top: 0.25rem;">
           <a href="#contact" class="px-8 py-4 rounded-full text-sm font-bold bg-[#2e7d52] hover:bg-[#236541] text-white shadow-xl hover:shadow-2xl transition flex items-center gap-2 transform hover:-translate-y-0.5">
             <span>Tell us what you need</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>

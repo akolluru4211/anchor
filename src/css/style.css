@@ -44,15 +44,17 @@ body {
 .hero-video-container {
   position: relative;
   width: 100%;
-  min-height: 85vh;
+  min-height: 80vh;
+  max-height: 920px;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
 @media (min-width: 1024px) {
   .hero-video-container {
-    min-height: 92vh;
+    min-height: 88vh;
   }
 }
 
