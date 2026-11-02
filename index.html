@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anchor & Roots | NRI Family Elder Care & Property Watch in India</title>
+  <meta name="description" content="Rooted in trust. Anchored in care. Dedicated, vetted on-ground support in Hyderabad for NRI families caring for parents and managing ancestral property.">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f2f8f4',
+              100: '#e2f0e7',
+              200: '#c5e2d1',
+              500: '#2e7d52',
+              600: '#236541',
+              700: '#1b4f33',
+              800: '#153e28',
+              900: '#0e2b1b',
+              950: '#081c11',
+            },
+            ochre: {
+              400: '#f3ba77',
+              500: '#b87333',
+              600: '#9c5f26',
+            }
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body class="bg-white text-[#14221a] antialiased selection:bg-[#e2f0e7] selection:text-[#0e2b1b]">
+
+  <!-- Header / Navigation (Sticky Glassmorphic) -->
+  <header class="sticky top-0 z-40 header-glass transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo + Tagline (Untouched Original Brand Mark) -->
+      <a href="#home" class="flex items-center gap-3.5 group">
+        <div class="relative w-12 h-12 rounded-full overflow-hidden p-0.5 bg-white border border-[#1b4f33]/15 shadow-sm group-hover:border-emerald-600 transition">
+          <img src="assets/logo.jpeg" alt="Anchor & Roots Logo" class="w-full h-full object-cover">
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-[#0e2b1b] leading-tight">
+            Anchor &amp; Roots
+          </span>
+          <span class="text-[11px] sm:text-xs font-medium text-[#4b6354] tracking-wide">
+            Rooted in trust. Anchored in care.
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-[#2d4336]">
+        <a href="#home" class="hover:text-[#0e2b1b] transition py-1 border-b-2 border-transparent hover:border-[#2e7d52]">Home</a>
+        <a href="#services" class="hover:text-[#0e2b1b] transition py-1 border-b-2 border-transparent hover:border-[#2e7d52]">Our services</a>
+        <a href="#how-it-works" class="hover:text-[#0e2b1b] transition py-1 border-b-2 border-transparent hover:border-[#2e7d52]">How it works</a>
+        <a href="#why-us" class="hover:text-[#0e2b1b] transition py-1 border-b-2 border-transparent hover:border-[#2e7d52]">Why Anchor &amp; Roots</a>
+        <a href="#plans" class="hover:text-[#0e2b1b] transition py-1 border-b-2 border-transparent hover:border-[#2e7d52]">Care plans</a>
+        <a href="#contact" class="hover:text-[#0e2b1b] transition py-1 border-b-2 border-transparent hover:border-[#2e7d52]">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="#contact" class="px-5 py-2.5 rounded-full text-xs font-semibold bg-[#0e2b1b] hover:bg-[#153e28] text-white shadow-sm hover:shadow transition flex items-center gap-2">
+          <span>Tell us what you need</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" type="button" class="md:hidden p-2 text-[#14221a] hover:bg-emerald-50 rounded-lg transition" aria-label="Open menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Slide-out Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-emerald-100/60 bg-white/95 backdrop-blur-md px-6 py-6 shadow-xl">
+      <div class="flex flex-col gap-4 text-base font-medium text-[#2d4336]">
+        <a href="#home" class="hover:text-[#0e2b1b] py-1">Home</a>
+        <a href="#services" class="hover:text-[#0e2b1b] py-1">Our services</a>
+        <a href="#how-it-works" class="hover:text-[#0e2b1b] py-1">How it works</a>
+        <a href="#why-us" class="hover:text-[#0e2b1b] py-1">Why Anchor &amp; Roots</a>
+        <a href="#plans" class="hover:text-[#0e2b1b] py-1">Care plans</a>
+        <a href="#contact" class="hover:text-[#0e2b1b] py-1">Contact</a>
+        <hr class="border-emerald-100 my-2">
+        <a href="#contact" class="w-full text-center py-3 rounded-full text-sm font-semibold bg-[#0e2b1b] text-white shadow">
+          Tell us what you need
+        </a>
+        <a href="#" class="whatsapp-trigger w-full text-center py-3 rounded-full text-sm font-semibold bg-[#eef6f0] text-[#0e2b1b] border border-emerald-200/60 flex items-center justify-center gap-2">
+          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-Width Cinematic Video Hero Section -->
+  <section id="home" class="hero-video-container">
+    
+    <!-- Full-Width Background Video -->
+    <video 
+      id="hero-bg-video"
+      class="hero-video-element" 
+      poster="assets/hero-poster.jpg" 
+      autoplay 
+      muted 
+      loop 
+      playsinline>
+      <source src="assets/hero-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Multi-Layer Scrim for High-Contrast Readability -->
+    <div class="hero-scrim"></div>
+
+    <!-- Background Subtle Nature Glows Superimposed over Video -->
+    <div class="absolute -top-24 right-10 w-96 h-96 rounded-full bg-emerald-500/15 filter blur-3xl pointer-events-none z-[3]"></div>
+    <div class="absolute bottom-10 left-10 w-80 h-80 rounded-full bg-emerald-700/20 filter blur-3xl pointer-events-none z-[3]"></div>
+
+    <!-- Foreground Content Directly Over Video -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-20 lg:py-28">
+      <div class="max-w-3xl space-y-7">
+
+        <!-- Superimposed Main Title: "Care for home. Peace of mind for you." -->
+        <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal text-white leading-[1.08] tracking-tight drop-shadow-md">
+          Care for home.<br>
+          <span class="italic text-[#f3ba77] font-normal">Peace of mind</span> for you.
+        </h1>
+
+        <!-- Supporting Narrative Copy -->
+        <p class="text-base sm:text-xl text-[#e2f0e7]/95 leading-relaxed font-normal max-w-2xl drop-shadow">
+          Thousands of miles away shouldn’t mean being out of the loop. We help NRI families care for loved ones, protect property and manage life in India—with one accountable team by your side.
+        </p>
+
+        <!-- Glass & Solid CTAs Superimposed on Video -->
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a href="#contact" class="px-8 py-4 rounded-full text-sm font-bold bg-[#2e7d52] hover:bg-[#236541] text-white shadow-xl hover:shadow-2xl transition flex items-center gap-2 transform hover:-translate-y-0.5">
+            <span>Tell us what you need</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#services" class="glass-pill px-7 py-4 rounded-full text-sm font-semibold transition flex items-center gap-2">
+            <span>Our Services</span>
+            <i data-lucide="arrow-down" class="w-4 h-4 text-emerald-300"></i>
+          </a>
+          <a href="#" class="whatsapp-trigger glass-pill text-emerald-300 hover:text-white px-5 py-4 rounded-full text-sm font-semibold flex items-center gap-2 transition">
+            <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i>
+            <span>WhatsApp Us</span>
+          </a>
+        </div>
+
+        <!-- Tactile Glass Trust Badges (Figma-Crafted) -->
+        <div class="pt-8 border-t border-white/15 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="flex items-center gap-3 glass-pill px-3.5 py-2.5 rounded-2xl">
+            <div class="w-7 h-7 rounded-full bg-emerald-400/20 flex items-center justify-center shrink-0">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-300"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white">Vetted Local Team</p>
+              <p class="text-[10px] text-emerald-200/80">Background verified</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 glass-pill px-3.5 py-2.5 rounded-2xl">
+            <div class="w-7 h-7 rounded-full bg-emerald-400/20 flex items-center justify-center shrink-0">
+              <i data-lucide="video" class="w-4 h-4 text-emerald-300"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white">Photo &amp; Video Proof</p>
+              <p class="text-[10px] text-emerald-200/80">GPS time-stamped</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 glass-pill px-3.5 py-2.5 rounded-2xl">
+            <div class="w-7 h-7 rounded-full bg-emerald-400/20 flex items-center justify-center shrink-0">
+              <i data-lucide="user-check" class="w-4 h-4 text-emerald-300"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white">Dedicated Coordinator</p>
+              <p class="text-[10px] text-emerald-200/80">One single lead</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Organic Wave SVG Transition to White Section Below -->
+    <div class="absolute bottom-0 left-0 right-0 pointer-events-none z-[5] overflow-hidden leading-none">
+      <svg class="relative block w-full h-8 sm:h-12 text-white" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="currentColor">
+        <path d="M0,0 C150,90 350,-40 500,40 C650,120 900,20 1200,60 L1200,120 L0,120 Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Section: One Reliable Connection. Many Ways to Help. (With Enhanced Nature & Topo Watermarks) -->
+  <section class="py-20 bg-white relative overflow-hidden topo-lines">
+    <!-- Subtle Botanical Branch Illustration (Left) -->
+    <div class="absolute -left-12 top-1/2 -translate-y-1/2 w-48 h-96 pointer-events-none opacity-20 text-[#2e7d52]">
+      <svg viewBox="0 0 100 200" fill="currentColor">
+        <path d="M10,100 Q40,60 70,80 Q90,50 95,20 Q60,40 40,80 Q20,120 10,100 Z" opacity="0.6"/>
+        <path d="M10,100 Q45,130 65,115 Q85,150 90,180 Q65,150 40,120 Z" opacity="0.4"/>
+      </svg>
+    </div>
+
+    <!-- Subtle Botanical Branch Illustration (Right) -->
+    <div class="absolute -right-12 top-1/2 -translate-y-1/2 w-48 h-96 pointer-events-none opacity-20 text-[#2e7d52] scale-x-[-1]">
+      <svg viewBox="0 0 100 200" fill="currentColor">
+        <path d="M10,100 Q40,60 70,80 Q90,50 95,20 Q60,40 40,80 Q20,120 10,100 Z" opacity="0.6"/>
+        <path d="M10,100 Q45,130 65,115 Q85,150 90,180 Q65,150 40,120 Z" opacity="0.4"/>
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      
+      <!-- Tactile Nature Certified Stamp Badge -->
+      <div class="stamp-badge inline-flex items-center gap-2 text-xs font-bold text-[#143d2b] mb-4">
+        <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#2e7d52]"></i>
+        <span>Certified NRI Family Care Standard • Hyderabad</span>
+      </div>
+
+      <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-[#0e2b1b] tracking-tight uppercase leading-tight">
+        One reliable connection.<br class="hidden sm:inline"> Many ways to help.
+      </h2>
+      <p class="mt-5 text-sm sm:text-base text-[#4b6354] max-w-2xl mx-auto uppercase tracking-wider font-medium">
+        Start with what matters most today. As trust grows, we can help with more of life back home.
+      </p>
+
+      <!-- Organic Divider flourish -->
+      <div class="flex items-center justify-center gap-2 mt-8">
+        <span class="w-12 h-px bg-[#2e7d52]/20"></span>
+        <i data-lucide="sprout" class="w-4 h-4 text-[#2e7d52]"></i>
+        <span class="w-12 h-px bg-[#2e7d52]/20"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid (The 6 Pillars with Nature Dot Grid & Soft Elevation) -->
+  <section id="services" class="py-24 bg-[#f9fbf9] relative bg-nature-pattern">
+    
+    <!-- Ambient Radial Leaves Glow in Background -->
+    <div class="absolute top-10 left-1/4 w-96 h-96 rounded-full bg-emerald-200/20 filter blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 right-1/4 w-96 h-96 rounded-full bg-emerald-100/40 filter blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-14 gap-4">
+        <div>
+          <span class="text-xs font-bold tracking-wider text-[#2e7d52] uppercase flex items-center gap-1.5">
+            <i data-lucide="trees" class="w-4 h-4"></i>
+            <span>Our Core Pillars</span>
+          </span>
+          <h3 class="font-serif text-3xl sm:text-4xl text-[#0e2b1b] mt-1.5">Services tailored for NRI families</h3>
+        </div>
+        <p class="text-xs sm:text-sm text-[#597163] max-w-md">
+          Every visit is thoroughly documented with geo-tagged photographic and video proof sent straight to your phone.
+        </p>
+      </div>
+
+      <!-- 6 Service Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- 1. Elder Care -->
+        <div class="service-card group bg-white rounded-3xl overflow-hidden border border-[#143d2b]/10 shadow-nature shadow-nature-hover flex flex-col">
+          <div class="service-img-wrapper h-56 bg-emerald-50">
+            <img src="assets/elder-care.jpg" alt="Elder Care" class="w-full h-full object-cover">
+            <div class="absolute top-3.5 left-3.5">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-sm text-[#0e2b1b] shadow-sm">
+                Most Requested
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-semibold text-[#2e7d52] mb-1.5">
+                <i data-lucide="heart" class="w-3.5 h-3.5"></i>
+                <span>Care &amp; Wellness</span>
+              </div>
+              <h4 class="font-serif text-2xl text-[#0e2b1b]">Elder Care</h4>
+              <p class="text-sm text-[#4b6354] mt-2 leading-relaxed">
+                Regular check-ins, doctor visit coordination, medicine delivery and practical support for parents and loved ones.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-[#143d2b]/5 flex items-center justify-between">
+              <button data-service="elder-care" class="text-xs font-bold text-[#0e2b1b] hover:text-[#2e7d52] flex items-center gap-1.5 transition">
+                <span>Discuss care needs</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <span class="text-xs text-[#597163]">From ₹4,999/mo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Property & Land Watch -->
+        <div class="service-card group bg-white rounded-3xl overflow-hidden border border-[#143d2b]/10 shadow-nature shadow-nature-hover flex flex-col">
+          <div class="service-img-wrapper h-56 bg-emerald-50">
+            <img src="assets/property-watch.jpg" alt="Property & Land Watch" class="w-full h-full object-cover">
+            <div class="absolute top-3.5 left-3.5">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-sm text-[#0e2b1b] shadow-sm">
+                Geo-Tagged Proof
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-semibold text-[#2e7d52] mb-1.5">
+                <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+                <span>Asset Protection</span>
+              </div>
+              <h4 class="font-serif text-2xl text-[#0e2b1b]">Property &amp; Land Watch</h4>
+              <p class="text-sm text-[#4b6354] mt-2 leading-relaxed">
+                Scheduled inspections of homes and plots, encroachment checks and maintenance coordination, with geo-tagged photo and video proof.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-[#143d2b]/5 flex items-center justify-between">
+              <button data-service="property-watch" class="text-xs font-bold text-[#0e2b1b] hover:text-[#2e7d52] flex items-center gap-1.5 transition">
+                <span>Protect your Property</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <span class="text-xs text-[#597163]">Annual plans</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Shipping & Errands -->
+        <div class="service-card group bg-white rounded-3xl overflow-hidden border border-[#143d2b]/10 shadow-nature shadow-nature-hover flex flex-col">
+          <div class="service-img-wrapper h-56 bg-emerald-50">
+            <img src="assets/shipping-errands.jpg" alt="Shipping & Errands" class="w-full h-full object-cover">
+            <div class="absolute top-3.5 left-3.5">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-sm text-[#0e2b1b] shadow-sm">
+                Local On-Demand
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-semibold text-[#2e7d52] mb-1.5">
+                <i data-lucide="package" class="w-3.5 h-3.5"></i>
+                <span>Logistics &amp; Errands</span>
+              </div>
+              <h4 class="font-serif text-2xl text-[#0e2b1b]">Shipping &amp; Errands</h4>
+              <p class="text-sm text-[#4b6354] mt-2 leading-relaxed">
+                Help with local purchases, gifts, documents and everyday requests—coordinated with clear updates.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-[#143d2b]/5 flex items-center justify-between">
+              <button data-service="shipping-errands" class="text-xs font-bold text-[#0e2b1b] hover:text-[#2e7d52] flex items-center gap-1.5 transition">
+                <span>Make a Request</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <span class="text-xs text-[#597163]">On-demand</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Medical Coordination -->
+        <div class="service-card group bg-white rounded-3xl overflow-hidden border border-[#143d2b]/10 shadow-nature shadow-nature-hover flex flex-col">
+          <div class="service-img-wrapper h-56 bg-emerald-50">
+            <img src="assets/medical-coordination.jpg" alt="Medical Coordination" class="w-full h-full object-cover">
+            <div class="absolute top-3.5 left-3.5">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-sm text-[#0e2b1b] shadow-sm">
+                Healthcare Escort
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-semibold text-[#2e7d52] mb-1.5">
+                <i data-lucide="activity" class="w-3.5 h-3.5"></i>
+                <span>Support Service</span>
+              </div>
+              <h4 class="font-serif text-2xl text-[#0e2b1b]">Medical Coordination</h4>
+              <p class="text-sm text-[#4b6354] mt-2 leading-relaxed">
+                A supporting service: hospital visits, records and specialist follow-ups, coordinated alongside Elder Care.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-[#143d2b]/5 flex items-center justify-between">
+              <button data-service="medical-coordination" class="text-xs font-bold text-[#0e2b1b] hover:text-[#2e7d52] flex items-center gap-1.5 transition">
+                <span>Plan care support</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <span class="text-xs text-[#597163]">Bundled or standalone</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Personalized Travel -->
+        <div class="service-card group bg-white rounded-3xl overflow-hidden border border-[#143d2b]/10 shadow-nature shadow-nature-hover flex flex-col">
+          <div class="service-img-wrapper h-56 bg-emerald-50">
+            <img src="assets/personalized-travel.jpg" alt="Personalized Travel" class="w-full h-full object-cover">
+            <div class="absolute top-3.5 left-3.5">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-[#0e2b1b] shadow-sm">
+                Coming Soon
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-semibold text-[#b87333] mb-1.5">
+                <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+                <span>Homecoming</span>
+              </div>
+              <h4 class="font-serif text-2xl text-[#0e2b1b]">Personalized Travel</h4>
+              <p class="text-sm text-[#4b6354] mt-2 leading-relaxed">
+                Coming soon: airport pickups, home readiness and local arrangements for your visits back home.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-[#143d2b]/5 flex items-center justify-between">
+              <button data-service="personalized-travel" class="text-xs font-bold text-[#0e2b1b] hover:text-[#2e7d52] flex items-center gap-1.5 transition">
+                <span>Register Interest</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <span class="text-xs text-[#597163]">Waitlist</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Home, Weddings & Events -->
+        <div class="service-card group bg-white rounded-3xl overflow-hidden border border-[#143d2b]/10 shadow-nature shadow-nature-hover flex flex-col">
+          <div class="service-img-wrapper h-56 bg-emerald-50">
+            <img src="assets/events.jpg" alt="Home, Weddings & Events" class="w-full h-full object-cover">
+            <div class="absolute top-3.5 left-3.5">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-[#0e2b1b] shadow-sm">
+                Future Offering
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-semibold text-[#b87333] mb-1.5">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                <span>Celebrations &amp; Works</span>
+              </div>
+              <h4 class="font-serif text-2xl text-[#0e2b1b]">Home, Weddings &amp; Events</h4>
+              <p class="text-sm text-[#4b6354] mt-2 leading-relaxed">
+                Future offering: renovations, family occasions and event coordination through our trusted partner network.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-[#143d2b]/5 flex items-center justify-between">
+              <button data-service="events-weddings" class="text-xs font-bold text-[#0e2b1b] hover:text-[#2e7d52] flex items-center gap-1.5 transition">
+                <span>Register Interest</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <span class="text-xs text-[#597163]">Waitlist</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section: More Than a Service (Enriched with Nature Accents) -->
+  <section class="py-20 bg-white border-t border-[#143d2b]/5 relative overflow-hidden">
+    <!-- Topographic Contour Backdrop -->
+    <div class="absolute inset-0 topo-lines pointer-events-none opacity-40"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="bg-gradient-to-br from-[#eef6f0] via-[#f7faf7] to-[#ffffff] rounded-3xl p-8 sm:p-12 lg:p-16 border border-[#2e7d52]/20 shadow-nature relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <!-- Left Column -->
+          <div class="lg:col-span-5 space-y-5">
+            <div class="w-12 h-12 rounded-2xl bg-white border border-[#2e7d52]/20 shadow-sm flex items-center justify-center">
+              <i data-lucide="leaf" class="w-6 h-6 text-[#2e7d52]"></i>
+            </div>
+            <h3 class="font-serif text-3xl sm:text-4xl text-[#0e2b1b] leading-tight">
+              Distance may separate you.<br>
+              <span class="italic text-[#b87333]">Care keeps you connected.</span>
+            </h3>
+            <p class="text-sm text-[#4b6354] leading-relaxed">
+              We know trust is the real need—not another list of unverified vendors. Anchor &amp; Roots is designed to give your family a consistent point of contact and complete visibility into every task.
+            </p>
+          </div>
+
+          <!-- Right Column: Structured Checklist -->
+          <div class="lg:col-span-7 bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#2e7d52]/15 shadow-sm space-y-4">
+            <span class="text-xs font-bold tracking-widest text-[#b87333] uppercase">
+              More than a service
+            </span>
+            <h4 class="font-serif text-2xl text-[#0e2b1b]">
+              Feel connected to the people and places that matter.
+            </h4>
+
+            <ul class="space-y-3.5 pt-2">
+              <li class="flex items-start gap-3 text-sm text-[#36493e]">
+                <div class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-3 h-3 text-[#1b4f33]"></i>
+                </div>
+                <span><strong>A dedicated relationship manager</strong> to personally own and oversee each request</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-[#36493e]">
+                <div class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-3 h-3 text-[#1b4f33]"></i>
+                </div>
+                <span><strong>Vetted local partners</strong> with rigorous background verifications and clear expectations</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-[#36493e]">
+                <div class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-3 h-3 text-[#1b4f33]"></i>
+                </div>
+                <span><strong>Time-stamped photo or video updates</strong> uploaded after every visit</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-[#36493e]">
+                <div class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-3 h-3 text-[#1b4f33]"></i>
+                </div>
+                <span><strong>Transparent pricing</strong> and milestone-based sign-offs with zero hidden charges</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-[#36493e]">
+                <div class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-3 h-3 text-[#1b4f33]"></i>
+                </div>
+                <span><strong>Monthly summaries</strong> to keep you seamlessly informed from anywhere in the world</span>
+              </li>
+            </ul>
+
+            <div class="pt-4">
+              <a href="#how-it-works" class="inline-flex items-center gap-2 text-sm font-bold text-[#0e2b1b] hover:text-[#2e7d52] transition">
+                <span>See how it works</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive "How It Works" Section -->
+  <section id="how-it-works" class="py-24 bg-[#f9fbf9] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold tracking-wider text-[#2e7d52] uppercase">Simple, Accountable Process</span>
+        <h3 class="font-serif text-3xl sm:text-4xl text-[#0e2b1b] mt-1">How Anchor &amp; Roots works</h3>
+        <p class="text-sm text-[#4b6354] mt-3">
+          Designed specifically to give NRI children total clarity without having to coordinate multiple relatives or third-party vendors.
+        </p>
+      </div>
+
+      <!-- 4 Step Stepper -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+        
+        <!-- Step 1 -->
+        <div class="bg-white rounded-3xl p-6 border border-[#143d2b]/10 shadow-sm relative">
+          <div class="w-10 h-10 rounded-2xl bg-[#0e2b1b] text-white flex items-center justify-center font-bold text-sm mb-4">
+            01
+          </div>
+          <h4 class="font-serif text-xl text-[#0e2b1b]">Share your needs</h4>
+          <p class="text-xs text-[#4b6354] mt-2 leading-relaxed">
+            Tell us about your parents' routines, ancestral property coordinates, or specific errands in Hyderabad via web form or WhatsApp.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white rounded-3xl p-6 border border-[#143d2b]/10 shadow-sm relative">
+          <div class="w-10 h-10 rounded-2xl bg-[#153e28] text-white flex items-center justify-center font-bold text-sm mb-4">
+            02
+          </div>
+          <h4 class="font-serif text-xl text-[#0e2b1b]">Free home audit</h4>
+          <p class="text-xs text-[#4b6354] mt-2 leading-relaxed">
+            Our local care lead conducts a complimentary on-ground visit to meet parents, assess comfort needs, and verify property conditions.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white rounded-3xl p-6 border border-[#143d2b]/10 shadow-sm relative">
+          <div class="w-10 h-10 rounded-2xl bg-[#2e7d52] text-white flex items-center justify-center font-bold text-sm mb-4">
+            03
+          </div>
+          <h4 class="font-serif text-xl text-[#0e2b1b]">Dedicated manager</h4>
+          <p class="text-xs text-[#4b6354] mt-2 leading-relaxed">
+            One vetted relationship manager is assigned to your family. You receive their direct contact details and schedule.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white rounded-3xl p-6 border border-[#143d2b]/10 shadow-sm relative">
+          <div class="w-10 h-10 rounded-2xl bg-[#b87333] text-white flex items-center justify-center font-bold text-sm mb-4">
+            04
+          </div>
+          <h4 class="font-serif text-xl text-[#0e2b1b]">Proof of every visit</h4>
+          <p class="text-xs text-[#4b6354] mt-2 leading-relaxed">
+            Receive time-stamped photo &amp; video reports, doctor notes, and bill receipts directly on your phone after every task.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold bg-[#0e2b1b] text-white hover:bg-[#153e28] transition shadow">
+          <span>Schedule your free Hyderabad home audit</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Why Families Trust Us (Tactile Figma Style with Topo Lines) -->
+  <section id="why-us" class="py-24 bg-white topo-lines relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-2xl mb-12">
+        <span class="text-xs font-bold tracking-wider text-[#2e7d52] uppercase">Trust &amp; Safeguards</span>
+        <h3 class="font-serif text-3xl sm:text-4xl text-[#0e2b1b] mt-1">Why families trust us</h3>
+        <p class="text-sm text-[#4b6354] mt-3">
+          One accountable point of contact in Hyderabad, backed by safeguards that keep you informed from wherever you are.
+        </p>
+      </div>
+
+      <!-- 4 Pillars Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- 01 Vetted Partners -->
+        <div class="p-8 rounded-3xl bg-[#f9fbf9] border border-[#143d2b]/10 hover:border-[#2e7d52]/30 transition shadow-sm">
+          <span class="font-serif text-3xl font-light text-[#b87333]">01</span>
+          <hr class="my-4 border-[#143d2b]/10">
+          <h4 class="text-base font-bold text-[#0e2b1b] uppercase tracking-wide">Vetted partners</h4>
+          <p class="text-sm text-[#4b6354] mt-2 leading-relaxed">
+            Every local caregiver, inspector and courier is background-checked, credential-verified, and reviewed before they ever work with your family.
+          </p>
+        </div>
+
+        <!-- 02 Clear Scope and Fees -->
+        <div class="p-8 rounded-3xl bg-[#f9fbf9] border border-[#143d2b]/10 hover:border-[#2e7d52]/30 transition shadow-sm">
+          <span class="font-serif text-3xl font-light text-[#b87333]">02</span>
+          <hr class="my-4 border-[#143d2b]/10">
+          <h4 class="text-base font-bold text-[#0e2b1b] uppercase tracking-wide">Clear scope and fees</h4>
+          <p class="text-sm text-[#4b6354] mt-2 leading-relaxed">
+            What's included and what it costs is agreed in writing upfront. No surprises, no hidden surcharges, and no unapproved expenses.
+          </p>
+        </div>
+
+        <!-- 03 Proof of Work -->
+        <div class="p-8 rounded-3xl bg-[#f9fbf9] border border-[#143d2b]/10 hover:border-[#2e7d52]/30 transition shadow-sm">
+          <span class="font-serif text-3xl font-light text-[#b87333]">03</span>
+          <hr class="my-4 border-[#143d2b]/10">
+          <h4 class="text-base font-bold text-[#0e2b1b] uppercase tracking-wide">Proof of work</h4>
+          <p class="text-sm text-[#4b6354] mt-2 leading-relaxed">
+            Photo and video updates after every visit, inspection and errand, so you see exactly what was done with geo-tagged timestamps.
+          </p>
+        </div>
+
+        <!-- 04 Milestone Controls -->
+        <div class="p-8 rounded-3xl bg-[#f9fbf9] border border-[#143d2b]/10 hover:border-[#2e7d52]/30 transition shadow-sm">
+          <span class="font-serif text-3xl font-light text-[#b87333]">04</span>
+          <hr class="my-4 border-[#143d2b]/10">
+          <h4 class="text-base font-bold text-[#0e2b1b] uppercase tracking-wide">Milestone controls</h4>
+          <p class="text-sm text-[#4b6354] mt-2 leading-relaxed">
+            Larger jobs move in approved stages. You sign off on each milestone before the next payment or project phase begins.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Care Plans Section (With Interactive Billing Switcher & Nature Aesthetics) -->
+  <section id="plans" class="py-24 bg-[#f4faf5] border-t border-[#143d2b]/5 relative overflow-hidden">
+    <!-- Ambient Mint Radials -->
+    <div class="absolute top-0 right-0 w-80 h-80 rounded-full bg-emerald-200/30 filter blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-bold tracking-wider text-[#2e7d52] uppercase">Care Plans</span>
+        <h3 class="font-serif text-3xl sm:text-4xl text-[#0e2b1b] mt-1">Simple plans for peace of mind</h3>
+        <p class="text-sm text-[#4b6354] mt-3">
+          Choose ongoing support that fits your family. Every visit is reported back to you with photo and video proof.
+        </p>
+
+        <!-- Monthly / Annual Toggle -->
+        <div class="inline-flex items-center gap-3 mt-7 p-1 bg-white rounded-full border border-[#2e7d52]/20 shadow-sm text-xs font-semibold">
+          <span class="px-3 py-1.5 rounded-full text-[#0e2b1b]">Standard Monthly</span>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="billing-toggle" class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#2e7d52]"></div>
+          </label>
+          <span class="px-3 py-1.5 rounded-full text-[#2e7d52] flex items-center gap-1">
+            <span>Annual Commitment</span>
+            <span class="px-1.5 py-0.5 rounded-full bg-emerald-100 text-[10px] text-emerald-800">Save 15%</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Pricing Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+
+        <!-- Tier 1: Care Basic -->
+        <div class="bg-white rounded-3xl p-8 border border-[#143d2b]/10 shadow-nature flex flex-col justify-between">
+          <div>
+            <h4 class="font-serif text-2xl text-[#0e2b1b]">Care Basic</h4>
+            <div class="mt-4 pb-4 border-b border-[#143d2b]/10">
+              <span id="price-basic" class="font-serif text-3xl font-semibold text-[#b87333]">From ₹4,999</span>
+              <span id="period-basic" class="text-xs text-[#597163] block mt-1">/ month</span>
+            </div>
+
+            <ul class="space-y-3.5 my-6 text-xs text-[#36493e]">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-[#2e7d52] shrink-0 mt-0.5"></i>
+                <span>Two wellness visits a month</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-[#2e7d52] shrink-0 mt-0.5"></i>
+                <span>Weekly check-in calls</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-[#2e7d52] shrink-0 mt-0.5"></i>
+                <span>Photo updates after every visit</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-[#2e7d52] shrink-0 mt-0.5"></i>
+                <span>Emergency coordination</span>
+              </li>
+            </ul>
+          </div>
+
+          <button data-plan-enquire="Care Basic" class="w-full py-3 rounded-full text-xs font-bold border border-[#0e2b1b] text-[#0e2b1b] hover:bg-[#0e2b1b] hover:text-white transition">
+            Enquire
+          </button>
+        </div>
+
+        <!-- Tier 2: Care Plus (Highlighted) -->
+        <div class="bg-white rounded-3xl p-8 border-2 border-[#2e7d52] shadow-xl relative flex flex-col justify-between transform md:-translate-y-2">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+            <span class="px-4 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-[#2e7d52] text-white shadow-sm">
+              Most Chosen
+            </span>
+          </div>
+
+          <div>
+            <h4 class="font-serif text-2xl text-[#0e2b1b]">Care Plus</h4>
+            <div class="mt-4 pb-4 border-b border-[#143d2b]/10">
+              <span id="price-plus" class="font-serif text-3xl font-semibold text-[#0e2b1b]">₹8,000–12,000</span>
+              <span id="period-plus" class="text-xs text-[#597163] block mt-1">/ month</span>
+            </div>
+
+            <ul class="space-y-3.5 my-6 text-xs text-[#36493e]">
+              <li class="flex items-start gap-2.5 font-medium">
+                <i data-lucide="check" class="w-4 h-4 text-[#2e7d52] shrink-0 mt-0.5"></i>
+                <span>Weekly wellness visits</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-[#2e7d52] shrink-0 mt-0.5"></i>
+                <span>Doctor appointment escort</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-[#2e7d52] shrink-0 mt-0.5"></i>
+                <span>Medicine and grocery runs</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-[#2e7d52] shrink-0 mt-0.5"></i>
+                <span>Photo and video reports</span>
+              </li>
+              <li class="flex items-start gap-2.5 font-medium">
+                <i data-lucide="check" class="w-4 h-4 text-[#2e7d52] shrink-0 mt-0.5"></i>
+                <span>Dedicated care coordinator</span>
+              </li>
+            </ul>
+          </div>
+
+          <button data-plan-enquire="Care Plus" class="w-full py-3 rounded-full text-xs font-bold bg-[#0e2b1b] hover:bg-[#153e28] text-white shadow transition">
+            Enquire
+          </button>
+        </div>
+
+        <!-- Tier 3: Property Watch -->
+        <div class="bg-white rounded-3xl p-8 border border-[#143d2b]/10 shadow-nature flex flex-col justify-between">
+          <div>
+            <h4 class="font-serif text-2xl text-[#0e2b1b]">Property Watch</h4>
+            <div class="mt-4 pb-4 border-b border-[#143d2b]/10">
+              <span id="price-property" class="font-serif text-3xl font-semibold text-[#b87333]">₹15,000–40,000</span>
+              <span id="period-property" class="text-xs text-[#597163] block mt-1">/ year</span>
+            </div>
+
+            <ul class="space-y-3.5 my-6 text-xs text-[#36493e]">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-[#2e7d52] shrink-0 mt-0.5"></i>
+                <span>Monthly home or land inspection</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-[#2e7d52] shrink-0 mt-0.5"></i>
+                <span>Geo-tagged photo and video proof</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-[#2e7d52] shrink-0 mt-0.5"></i>
+                <span>Bills, tax and maintenance tracking</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-[#2e7d52] shrink-0 mt-0.5"></i>
+                <span>Encroachment alerts</span>
+              </li>
+            </ul>
+          </div>
+
+          <button data-plan-enquire="Property Watch" class="w-full py-3 rounded-full text-xs font-bold border border-[#0e2b1b] text-[#0e2b1b] hover:bg-[#0e2b1b] hover:text-white transition">
+            Enquire
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Indicative Pricing Footnote -->
+      <p class="text-center text-xs text-[#597163] mt-10">
+        Indicative pricing for Hyderabad. Final plans are confirmed after a free home audit and may vary with your family's needs.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Contact & Free Audit Booking Section (Enriched with Nature Craft) -->
+  <section id="contact" class="py-24 bg-white relative topo-lines">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Context & Info -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="stamp-badge inline-flex items-center gap-1.5 text-[11px] font-bold text-[#143d2b]">
+            <i data-lucide="calendar" class="w-3.5 h-3.5 text-[#2e7d52]"></i>
+            <span>Complimentary In-Person Audit</span>
+          </div>
+
+          <h3 class="font-serif text-3xl sm:text-4xl text-[#0e2b1b] leading-tight">
+            What would make life back home easier?
+          </h3>
+          <p class="text-sm text-[#4b6354] leading-relaxed">
+            We're starting in Hyderabad. Tell us about your parents, your property or the errands you need done, and we'll arrange a free home audit. One accountable contact, vetted local partners, and photo and video proof of every visit.
+          </p>
+
+          <div class="space-y-4 pt-4 border-t border-[#143d2b]/10 text-xs">
+            <div class="flex items-center gap-3 text-[#36493e]">
+              <div class="w-8 h-8 rounded-full bg-[#eef6f0] flex items-center justify-center shrink-0">
+                <i data-lucide="map-pin" class="w-4 h-4 text-[#2e7d52]"></i>
+              </div>
+              <span>Hyderabad, Telangana, India</span>
+            </div>
+
+            <div class="flex items-center gap-3 text-[#36493e]">
+              <div class="w-8 h-8 rounded-full bg-[#eef6f0] flex items-center justify-center shrink-0">
+                <i data-lucide="mail" class="w-4 h-4 text-[#2e7d52]"></i>
+              </div>
+              <span>support@anchorroots.co.in</span>
+            </div>
+
+            <div class="flex items-center gap-3 text-[#36493e]">
+              <div class="w-8 h-8 rounded-full bg-[#eef6f0] flex items-center justify-center shrink-0">
+                <i data-lucide="phone-call" class="w-4 h-4 text-[#2e7d52]"></i>
+              </div>
+              <span>+91 99999 99999 (NRI Family Line)</span>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-3xl bg-[#eef6f0] border border-emerald-200/80 shadow-sm">
+            <p class="text-xs font-semibold text-[#0e2b1b]">Prefer WhatsApp?</p>
+            <p class="text-[11px] text-[#4b6354] mt-0.5">Chat directly with our care coordinator across international timezones.</p>
+            <a href="#" class="whatsapp-trigger mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-[#143d2b] hover:text-emerald-800">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5 text-[#2e7d52]"></i>
+              <span>Open WhatsApp Chat →</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Modern Form -->
+        <div class="lg:col-span-7 bg-[#f9fbf9] p-8 sm:p-10 rounded-3xl border border-[#143d2b]/10 shadow-sm relative">
+          
+          <!-- Success Notification Alert (Hidden initially) -->
+          <div id="form-success-alert" class="hidden mb-6 p-4 rounded-2xl bg-emerald-50 border border-emerald-300 text-emerald-900 text-xs flex items-start gap-3">
+            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+            <div>
+              <p class="font-bold">Thank you! Your request has been received.</p>
+              <p class="mt-0.5 text-emerald-800">Our Hyderabad team lead will reach out via WhatsApp/email within 12 hours to confirm your free home audit.</p>
+            </div>
+          </div>
+
+          <form id="audit-contact-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-[#0e2b1b] mb-1">First Name *</label>
+                <input type="text" required placeholder="e.g. Vikram" class="w-full px-4 py-2.5 rounded-xl bg-white border border-[#143d2b]/15 text-xs text-[#14221a] focus:border-[#2e7d52]">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#0e2b1b] mb-1">Last Name *</label>
+                <input type="text" required placeholder="e.g. Reddy" class="w-full px-4 py-2.5 rounded-xl bg-white border border-[#143d2b]/15 text-xs text-[#14221a] focus:border-[#2e7d52]">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-[#0e2b1b] mb-1">Email *</label>
+                <input type="email" required placeholder="name@domain.com" class="w-full px-4 py-2.5 rounded-xl bg-white border border-[#143d2b]/15 text-xs text-[#14221a] focus:border-[#2e7d52]">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#0e2b1b] mb-1">Phone / WhatsApp *</label>
+                <input type="tel" required placeholder="+1 / +44 / +971 / +91" class="w-full px-4 py-2.5 rounded-xl bg-white border border-[#143d2b]/15 text-xs text-[#14221a] focus:border-[#2e7d52]">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-[#0e2b1b] mb-1">Service Needed *</label>
+                <select id="form-service" class="w-full px-4 py-2.5 rounded-xl bg-white border border-[#143d2b]/15 text-xs text-[#14221a] focus:border-[#2e7d52]">
+                  <option value="elder-care">Elder Care (Parent visits &amp; wellness)</option>
+                  <option value="property-watch">Property &amp; Land Watch (Inspections)</option>
+                  <option value="shipping-errands">Shipping &amp; Local Errands</option>
+                  <option value="medical-coordination">Medical Coordination</option>
+                  <option value="personalized-travel">Personalized Travel (Homecoming)</option>
+                  <option value="events-weddings">Home, Weddings &amp; Events</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#0e2b1b] mb-1">Subject</label>
+                <input type="text" id="form-subject" placeholder="e.g. Monthly visits for parents in Jubilee Hills" class="w-full px-4 py-2.5 rounded-xl bg-white border border-[#143d2b]/15 text-xs text-[#14221a] focus:border-[#2e7d52]">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-[#0e2b1b] mb-1">Message *</label>
+              <textarea rows="4" required placeholder="Tell us about your parents' needs, property location, or any specific requests..." class="w-full px-4 py-2.5 rounded-xl bg-white border border-[#143d2b]/15 text-xs text-[#14221a] focus:border-[#2e7d52]"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 rounded-full text-xs font-bold bg-[#0e2b1b] hover:bg-[#153e28] text-white shadow-md hover:shadow-lg transition">
+              Submit Request for Free Home Audit
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Nature & Human-Crafted Footer -->
+  <footer class="bg-[#0e2b1b] text-white pt-16 pb-12 border-t border-[#1b4f33]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Footer Row: Brand & Manifesto -->
+      <div class="flex flex-col md:flex-row md:items-center justify-between pb-12 border-b border-[#1b4f33]/60 gap-8">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-full overflow-hidden p-0.5 bg-white border border-emerald-400/30">
+            <img src="assets/logo.jpeg" alt="Anchor & Roots Logo" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-serif text-2xl font-bold tracking-tight text-white">Anchor &amp; Roots</h4>
+            <p class="text-xs text-emerald-300 font-medium">Rooted in trust. Anchored in care.</p>
+          </div>
+        </div>
+
+        <div class="text-left md:text-right">
+          <p class="font-serif text-lg tracking-widest uppercase text-emerald-100">
+            Rooted in trust. Anchored in care.
+          </p>
+          <p class="text-xs text-[#a2c9b2] mt-1">
+            Hyderabad, Telangana, India • Serving NRI families across USA, UK, UAE &amp; Canada
+          </p>
+        </div>
+      </div>
+
+      <!-- Middle Links Navigation -->
+      <div class="py-8 flex flex-wrap items-center justify-between gap-6 text-xs text-emerald-200">
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
+          <a href="#services" class="hover:text-white transition">Elder Care</a>
+          <span>•</span>
+          <a href="#services" class="hover:text-white transition">Property &amp; Land Watch</a>
+          <span>•</span>
+          <a href="#services" class="hover:text-white transition">Shipping &amp; Errands</a>
+          <span>•</span>
+          <a href="#plans" class="hover:text-white transition">Care Plans</a>
+          <span>•</span>
+          <a href="#contact" class="hover:text-white transition">Contact</a>
+        </div>
+
+        <!-- Social Media Icons (From original site links) -->
+        <div class="flex items-center gap-4 text-emerald-300">
+          <a href="http://www.facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" aria-label="Facebook">
+            <i data-lucide="facebook" class="w-4 h-4"></i>
+          </a>
+          <a href="http://www.instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" aria-label="Instagram">
+            <i data-lucide="instagram" class="w-4 h-4"></i>
+          </a>
+          <a href="http://www.youtube.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" aria-label="YouTube">
+            <i data-lucide="youtube" class="w-4 h-4"></i>
+          </a>
+          <a href="http://www.x.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" aria-label="X (Twitter)">
+            <i data-lucide="twitter" class="w-4 h-4"></i>
+          </a>
+          <a href="http://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" aria-label="LinkedIn">
+            <i data-lucide="linkedin" class="w-4 h-4"></i>
+          </a>
+          <a href="http://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" aria-label="TikTok">
+            <i data-lucide="share-2" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom Disclaimer (Original Legal Copy) -->
+      <div class="pt-6 border-t border-[#1b4f33]/40 text-[11px] text-emerald-300/70 leading-relaxed flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <p>
+          © 2026 Anchor &amp; Roots. All rights reserved. Services are coordinated through vetted local partners; Anchor &amp; Roots is not a medical provider. Plans shown are indicative.
+        </p>
+        <a href="#home" class="hover:text-white transition flex items-center gap-1 shrink-0">
+          <span>Back to top</span>
+          <i data-lucide="arrow-up" class="w-3 h-3"></i>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Interactive Service Scope Modal -->
+  <div id="service-modal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div class="modal-content bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl border border-emerald-900/10">
+      
+      <!-- Modal Header Image -->
+      <div class="relative h-48 bg-emerald-900 overflow-hidden">
+        <img id="modal-image" src="assets/elder-care.jpg" alt="Service" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+        <button id="modal-close-btn" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-[#0e2b1b] flex items-center justify-center transition">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+        <div class="absolute bottom-4 left-6 right-6 text-white">
+          <span id="modal-tag" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-700/80 backdrop-blur-sm">Care &amp; Wellness</span>
+          <h3 id="modal-title" class="font-serif text-2xl font-bold mt-1 text-white">Elder Care</h3>
+        </div>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 sm:p-8 space-y-4 max-h-[60vh] overflow-y-auto">
+        <p id="modal-lead" class="text-xs font-semibold text-[#2e7d52]"></p>
+        <p id="modal-desc" class="text-xs text-[#4b6354] leading-relaxed"></p>
+
+        <div>
+          <h5 class="text-xs font-bold uppercase tracking-wider text-[#0e2b1b] mb-2">What's Included:</h5>
+          <ul id="modal-features" class="space-y-2"></ul>
+        </div>
+
+        <div class="p-3.5 rounded-2xl bg-[#f4faf5] border border-emerald-200/60 flex items-center justify-between text-xs">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#597163] block">Pricing Note</span>
+            <span id="modal-pricing" class="font-medium text-[#0e2b1b]"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 sm:p-6 bg-[#f9fbf9] border-t border-[#143d2b]/10 flex items-center justify-end gap-3">
+        <button onclick="document.getElementById('service-modal').classList.remove('active'); document.body.style.overflow='';" class="px-5 py-2.5 rounded-full text-xs font-semibold text-[#4b6354] hover:bg-gray-100 transition">
+          Close
+        </button>
+        <button id="modal-enquire-btn" class="px-6 py-2.5 rounded-full text-xs font-bold bg-[#0e2b1b] hover:bg-[#153e28] text-white transition flex items-center gap-1.5">
+          <span>Book Free Home Audit</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="src/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+/* Anchor & Roots - Minimal Nature & Figma-Craft UI Stylesheet */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-bg-pure: #ffffff;
+  --color-bg-subtle: #f8faf8;
+  --color-bg-card: #ffffff;
+  --color-bg-mint: #eef6f0;
+  --color-forest-dark: #0d281a;
+  --color-forest: #143d2b;
+  --color-forest-light: #1f563d;
+  --color-leaf: #2e7d52;
+  --color-leaf-light: #52b788;
+  --color-ochre: #b87333;
+  --color-ochre-light: #f3ba77;
+  --color-text-main: #14221a;
+  --color-text-muted: #4b6354;
+  --color-text-subtle: #768f80;
+  --color-border: rgba(20, 61, 43, 0.08);
+  --color-border-hover: rgba(46, 125, 82, 0.25);
+  
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-pure);
+  color: var(--color-text-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Full-Width Video Hero Styles */
+.hero-video-container {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .hero-video-container {
+    min-height: 92vh;
+  }
+}
+
+.hero-video-element {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+/* Multi-Layer Scrim for High Contrast Readability */
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: 
+    linear-gradient(90deg, rgba(8, 28, 17, 0.90) 0%, rgba(14, 43, 27, 0.78) 50%, rgba(14, 43, 27, 0.52) 100%),
+    linear-gradient(180deg, rgba(8, 28, 17, 0.55) 0%, transparent 40%, rgba(8, 28, 17, 0.88) 100%);
+}
+
+@media (max-width: 768px) {
+  .hero-scrim {
+    background: 
+      linear-gradient(180deg, rgba(8, 28, 17, 0.88) 0%, rgba(8, 28, 17, 0.92) 100%);
+  }
+}
+
+/* Organic Nature Accents on White */
+.bg-nature-pattern {
+  background-image: radial-gradient(rgba(20, 61, 43, 0.08) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+.bg-mesh-nature {
+  background-color: #ffffff;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(238, 246, 240, 0.8) 0px, transparent 50%),
+    radial-gradient(at 100% 20%, rgba(240, 247, 241, 0.9) 0px, transparent 55%),
+    radial-gradient(at 50% 60%, rgba(232, 245, 236, 0.45) 0px, transparent 65%);
+}
+
+/* Subtle Organic Card Shadow */
+.shadow-nature {
+  box-shadow: 0 4px 20px -2px rgba(13, 40, 26, 0.04), 0 2px 6px -1px rgba(13, 40, 26, 0.02);
+}
+
+.shadow-nature-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shadow-nature-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -4px rgba(13, 40, 26, 0.08), 0 4px 12px -2px rgba(13, 40, 26, 0.04);
+}
+
+/* Glassmorphism Elements */
+.header-glass {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(20, 61, 43, 0.06);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.glass-pill:hover {
+  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8faf8;
+}
+::-webkit-scrollbar-thumb {
+  background: #c3d9cc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #92bda3;
+}
+
+/* Glowing Pulsing Status Radar */
+@keyframes radar-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(74, 222, 128, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
+}
+
+.radar-dot {
+  animation: radar-pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* Service Card Image Hover Zoom */
+.service-img-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.service-img-wrapper img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card:hover .service-img-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Modal Transitions */
+.modal-backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease-out;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  transform: scale(0.96) translateY(12px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active .modal-content {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Topographical & Nature Background Watermarks */
+.topo-lines {
+  background-image: url("data:image/svg+xml,%3Csvg width='800' height='800' viewBox='0 0 800 800' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%232e7d52' stroke-width='1.2' stroke-opacity='0.08'%3E%3Cpath d='M-100,200 C150,150 250,350 450,250 C650,150 750,300 900,200'/%3E%3Cpath d='M-100,280 C150,230 250,430 450,330 C650,230 750,380 900,280'/%3E%3Cpath d='M-100,360 C150,310 250,510 450,410 C650,310 750,460 900,360'/%3E%3Cpath d='M-100,440 C150,390 250,590 450,490 C650,390 750,540 900,440'/%3E%3Cpath d='M-100,520 C150,470 250,670 450,570 C650,470 750,620 900,520'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Hand-crafted Stamp Motif */
+.stamp-badge {
+  border: 1.5px dashed rgba(46, 125, 82, 0.35);
+  border-radius: 9999px;
+  padding: 0.375rem 0.875rem;
+  background: rgba(238, 246, 240, 0.7);
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Smooth Focus Rings */
+input:focus, select:focus, textarea:focus, button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(46, 125, 82, 0.2);
+}
