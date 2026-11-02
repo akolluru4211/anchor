@@ -2,9 +2,10 @@
   "name": "anchor-roots",
   "version": "1.0.0",
   "description": "Anchor & Roots - Redesigned Minimal White & Green UI with Nature & Human-Crafted Elements",
+  "main": "server.js",
   "scripts": {
-    "start": "node local-server.js",
-    "dev": "node local-server.js"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
   "keywords": [
     "anchorroots",
