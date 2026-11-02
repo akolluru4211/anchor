@@ -7,6 +7,11 @@
   <meta name="description" content="Rooted in trust. Anchored in care. Dedicated, vetted on-ground support in Hyderabad for NRI families caring for parents and managing ancestral property.">
   <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
   
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -43,18 +48,135 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Custom Styles -->
+  <!-- Fallback External Stylesheet -->
   <link rel="stylesheet" href="src/css/style.css">
+
+  <!-- Self-Contained Bulletproof Inline Styles -->
+  <style>
+    :root {
+      --color-bg-pure: #ffffff;
+      --color-bg-subtle: #f8faf8;
+      --color-bg-mint: #eef6f0;
+      --color-forest-dark: #0d281a;
+      --color-forest: #143d2b;
+      --color-leaf: #2e7d52;
+      --color-ochre-light: #f3ba77;
+      --font-serif: 'Fraunces', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-bg-pure);
+      color: #14221a;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-serif { font-family: var(--font-serif); }
+    .font-sans { font-family: var(--font-sans); }
+
+    /* Full-Width Video Hero Styles */
+    .hero-video-container {
+      position: relative;
+      width: 100%;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background-color: #0d281a;
+    }
+    @media (min-width: 1024px) {
+      .hero-video-container { min-height: 92vh; }
+    }
+    .hero-video-element {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 1;
+    }
+    .hero-scrim {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: 
+        linear-gradient(90deg, rgba(8, 28, 17, 0.90) 0%, rgba(14, 43, 27, 0.78) 50%, rgba(14, 43, 27, 0.52) 100%),
+        linear-gradient(180deg, rgba(8, 28, 17, 0.55) 0%, transparent 40%, rgba(8, 28, 17, 0.88) 100%);
+      pointer-events: none;
+    }
+    @media (max-width: 768px) {
+      .hero-scrim {
+        background: linear-gradient(180deg, rgba(8, 28, 17, 0.88) 0%, rgba(8, 28, 17, 0.92) 100%);
+      }
+    }
+
+    /* Glassmorphic Pills */
+    .glass-pill {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+    }
+    .glass-pill:hover {
+      background: rgba(255, 255, 255, 0.28);
+      border-color: rgba(255, 255, 255, 0.45);
+    }
+    .header-glass {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(20, 61, 43, 0.06);
+    }
+
+    /* Nature Patterns & Watermarks */
+    .bg-nature-pattern {
+      background-image: radial-gradient(rgba(20, 61, 43, 0.08) 1.2px, transparent 1.2px);
+      background-size: 24px 24px;
+    }
+    .topo-lines {
+      background-image: url("data:image/svg+xml,%3Csvg width='800' height='800' viewBox='0 0 800 800' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%232e7d52' stroke-width='1.2' stroke-opacity='0.08'%3E%3Cpath d='M-100,200 C150,150 250,350 450,250 C650,150 750,300 900,200'/%3E%3Cpath d='M-100,280 C150,230 250,430 450,330 C650,230 750,380 900,280'/%3E%3Cpath d='M-100,360 C150,310 250,510 450,410 C650,310 750,460 900,360'/%3E%3Cpath d='M-100,440 C150,390 250,590 450,490 C650,390 750,540 900,440'/%3E%3Cpath d='M-100,520 C150,470 250,670 450,570 C650,470 750,620 900,520'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    .stamp-badge {
+      border: 1.5px dashed rgba(46, 125, 82, 0.35);
+      border-radius: 9999px;
+      padding: 0.375rem 0.875rem;
+      background: rgba(238, 246, 240, 0.7);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .shadow-nature {
+      box-shadow: 0 4px 20px -2px rgba(13, 40, 26, 0.04), 0 2px 6px -1px rgba(13, 40, 26, 0.02);
+    }
+    .shadow-nature-hover {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .shadow-nature-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px -4px rgba(13, 40, 26, 0.08), 0 4px 12px -2px rgba(13, 40, 26, 0.04);
+    }
+    .service-img-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
+    .service-img-wrapper img {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .service-card:hover .service-img-wrapper img {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body class="bg-white text-[#14221a] antialiased selection:bg-[#e2f0e7] selection:text-[#0e2b1b]">
 
   <!-- Header / Navigation (Sticky Glassmorphic) -->
-  <header class="sticky top-0 z-40 header-glass transition-all duration-200">
+  <header class="sticky top-0 z-40 header-glass transition-all duration-200 bg-white/90 backdrop-blur-md border-b border-[#143d2b]/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <!-- Logo + Tagline (Untouched Original Brand Mark) -->
       <a href="#home" class="flex items-center gap-3.5 group">
-        <div class="relative w-12 h-12 rounded-full overflow-hidden p-0.5 bg-white border border-[#1b4f33]/15 shadow-sm group-hover:border-emerald-600 transition">
-          <img src="assets/logo.jpeg" alt="Anchor & Roots Logo" class="w-full h-full object-cover">
+        <div class="relative w-12 h-12 rounded-full overflow-hidden p-0.5 bg-white border border-[#1b4f33]/15 shadow-sm group-hover:border-emerald-600 transition shrink-0">
+          <img src="assets/logo.jpeg" onerror="this.onerror=null; this.src='https://static.wixstatic.com/media/d49a40_84974029cc8d49faa93f68cb6c193112~mv2.jpeg';" alt="Anchor & Roots Logo" class="w-full h-full object-cover">
         </div>
         <div class="flex flex-col">
           <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-[#0e2b1b] leading-tight">
@@ -111,13 +233,14 @@
     </div>
   </header>
 
-  <!-- Full-Width Cinematic Video Hero Section -->
-  <section id="home" class="hero-video-container">
+  <!-- Full-Width Cinematic Video Hero Section (Always Dark Green Background with Full Video) -->
+  <section id="home" class="hero-video-container relative w-full min-h-[85vh] lg:min-h-[92vh] flex items-center overflow-hidden bg-[#0e2b1b]" style="position: relative; width: 100%; min-height: 85vh; background-color: #0e2b1b; display: flex; align-items: center; overflow: hidden;">
     
-    <!-- Full-Width Background Video -->
+    <!-- Full-Width Background Video (Absolute Inset-0) -->
     <video 
       id="hero-bg-video"
-      class="hero-video-element" 
+      class="hero-video-element absolute inset-0 w-full h-full object-cover object-center z-0"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;"
       poster="assets/hero-poster.jpg" 
       autoplay 
       muted 
@@ -129,24 +252,24 @@
     </video>
 
     <!-- Multi-Layer Scrim for High-Contrast Readability -->
-    <div class="hero-scrim"></div>
+    <div class="hero-scrim absolute inset-0 z-10 pointer-events-none" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; background: linear-gradient(90deg, rgba(8, 28, 17, 0.90) 0%, rgba(14, 43, 27, 0.78) 50%, rgba(14, 43, 27, 0.52) 100%); pointer-events: none;"></div>
 
     <!-- Background Subtle Nature Glows Superimposed over Video -->
-    <div class="absolute -top-24 right-10 w-96 h-96 rounded-full bg-emerald-500/15 filter blur-3xl pointer-events-none z-[3]"></div>
-    <div class="absolute bottom-10 left-10 w-80 h-80 rounded-full bg-emerald-700/20 filter blur-3xl pointer-events-none z-[3]"></div>
+    <div class="absolute -top-24 right-10 w-96 h-96 rounded-full bg-emerald-500/15 filter blur-3xl pointer-events-none z-10"></div>
+    <div class="absolute bottom-10 left-10 w-80 h-80 rounded-full bg-emerald-700/20 filter blur-3xl pointer-events-none z-10"></div>
 
     <!-- Foreground Content Directly Over Video -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full py-20 lg:py-28" style="position: relative; z-index: 10;">
       <div class="max-w-3xl space-y-7">
 
         <!-- Superimposed Main Title: "Care for home. Peace of mind for you." -->
-        <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal text-white leading-[1.08] tracking-tight drop-shadow-md">
+        <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal text-white leading-[1.08] tracking-tight drop-shadow-md" style="color: #ffffff; text-shadow: 0 2px 14px rgba(0,0,0,0.65);">
           Care for home.<br>
           <span class="italic text-[#f3ba77] font-normal">Peace of mind</span> for you.
         </h1>
 
         <!-- Supporting Narrative Copy -->
-        <p class="text-base sm:text-xl text-[#e2f0e7]/95 leading-relaxed font-normal max-w-2xl drop-shadow">
+        <p class="text-base sm:text-xl text-[#e2f0e7]/95 leading-relaxed font-normal max-w-2xl drop-shadow" style="color: #e2f0e7; text-shadow: 0 1px 8px rgba(0,0,0,0.5);">
           Thousands of miles away shouldn’t mean being out of the loop. We help NRI families care for loved ones, protect property and manage life in India—with one accountable team by your side.
         </p>
 
@@ -203,7 +326,7 @@
     </div>
 
     <!-- Organic Wave SVG Transition to White Section Below -->
-    <div class="absolute bottom-0 left-0 right-0 pointer-events-none z-[5] overflow-hidden leading-none">
+    <div class="absolute bottom-0 left-0 right-0 pointer-events-none z-20 overflow-hidden leading-none">
       <svg class="relative block w-full h-8 sm:h-12 text-white" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="currentColor">
         <path d="M0,0 C150,90 350,-40 500,40 C650,120 900,20 1200,60 L1200,120 L0,120 Z"></path>
       </svg>
@@ -280,7 +403,7 @@
         <!-- 1. Elder Care -->
         <div class="service-card group bg-white rounded-3xl overflow-hidden border border-[#143d2b]/10 shadow-nature shadow-nature-hover flex flex-col">
           <div class="service-img-wrapper h-56 bg-emerald-50">
-            <img src="assets/elder-care.jpg" alt="Elder Care" class="w-full h-full object-cover">
+            <img src="assets/elder-care.jpg" onerror="this.onerror=null; this.src='https://static.wixstatic.com/media/d49a40_ec2208abd9d748d59baefe1cfec0cf41~mv2.jpg';" alt="Elder Care" class="w-full h-full object-cover">
             <div class="absolute top-3.5 left-3.5">
               <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-sm text-[#0e2b1b] shadow-sm">
                 Most Requested
@@ -311,7 +434,7 @@
         <!-- 2. Property & Land Watch -->
         <div class="service-card group bg-white rounded-3xl overflow-hidden border border-[#143d2b]/10 shadow-nature shadow-nature-hover flex flex-col">
           <div class="service-img-wrapper h-56 bg-emerald-50">
-            <img src="assets/property-watch.jpg" alt="Property & Land Watch" class="w-full h-full object-cover">
+            <img src="assets/property-watch.jpg" onerror="this.onerror=null; this.src='https://static.wixstatic.com/media/d49a40_5e9fb4f735ac4a4cbda5f0d6d84968ac~mv2.jpg';" alt="Property & Land Watch" class="w-full h-full object-cover">
             <div class="absolute top-3.5 left-3.5">
               <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-sm text-[#0e2b1b] shadow-sm">
                 Geo-Tagged Proof
@@ -342,7 +465,7 @@
         <!-- 3. Shipping & Errands -->
         <div class="service-card group bg-white rounded-3xl overflow-hidden border border-[#143d2b]/10 shadow-nature shadow-nature-hover flex flex-col">
           <div class="service-img-wrapper h-56 bg-emerald-50">
-            <img src="assets/shipping-errands.jpg" alt="Shipping & Errands" class="w-full h-full object-cover">
+            <img src="assets/shipping-errands.jpg" onerror="this.onerror=null; this.src='https://static.wixstatic.com/media/d49a40_2f947b0eef0a49848ed384c7ab966864~mv2.jpg';" alt="Shipping & Errands" class="w-full h-full object-cover">
             <div class="absolute top-3.5 left-3.5">
               <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-sm text-[#0e2b1b] shadow-sm">
                 Local On-Demand
@@ -373,7 +496,7 @@
         <!-- 4. Medical Coordination -->
         <div class="service-card group bg-white rounded-3xl overflow-hidden border border-[#143d2b]/10 shadow-nature shadow-nature-hover flex flex-col">
           <div class="service-img-wrapper h-56 bg-emerald-50">
-            <img src="assets/medical-coordination.jpg" alt="Medical Coordination" class="w-full h-full object-cover">
+            <img src="assets/medical-coordination.jpg" onerror="this.onerror=null; this.src='https://static.wixstatic.com/media/d49a40_fa2f8dfc27d744ad88554525de05503e~mv2.jpg';" alt="Medical Coordination" class="w-full h-full object-cover">
             <div class="absolute top-3.5 left-3.5">
               <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-sm text-[#0e2b1b] shadow-sm">
                 Healthcare Escort
@@ -404,7 +527,7 @@
         <!-- 5. Personalized Travel -->
         <div class="service-card group bg-white rounded-3xl overflow-hidden border border-[#143d2b]/10 shadow-nature shadow-nature-hover flex flex-col">
           <div class="service-img-wrapper h-56 bg-emerald-50">
-            <img src="assets/personalized-travel.jpg" alt="Personalized Travel" class="w-full h-full object-cover">
+            <img src="assets/personalized-travel.jpg" onerror="this.onerror=null; this.src='https://static.wixstatic.com/media/d49a40_0caf9a259388460e82a0c2fb4c848a75~mv2.jpg';" alt="Personalized Travel" class="w-full h-full object-cover">
             <div class="absolute top-3.5 left-3.5">
               <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-[#0e2b1b] shadow-sm">
                 Coming Soon
@@ -435,7 +558,7 @@
         <!-- 6. Home, Weddings & Events -->
         <div class="service-card group bg-white rounded-3xl overflow-hidden border border-[#143d2b]/10 shadow-nature shadow-nature-hover flex flex-col">
           <div class="service-img-wrapper h-56 bg-emerald-50">
-            <img src="assets/events.jpg" alt="Home, Weddings & Events" class="w-full h-full object-cover">
+            <img src="assets/events.jpg" onerror="this.onerror=null; this.src='https://static.wixstatic.com/media/d49a40_d2fe8e33600a4f20bae2a01fd4299cf8~mv2.jpg';" alt="Home, Weddings & Events" class="w-full h-full object-cover">
             <div class="absolute top-3.5 left-3.5">
               <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-[#0e2b1b] shadow-sm">
                 Future Offering
@@ -954,8 +1077,8 @@
       <!-- Top Footer Row: Brand & Manifesto -->
       <div class="flex flex-col md:flex-row md:items-center justify-between pb-12 border-b border-[#1b4f33]/60 gap-8">
         <div class="flex items-center gap-4">
-          <div class="w-14 h-14 rounded-full overflow-hidden p-0.5 bg-white border border-emerald-400/30">
-            <img src="assets/logo.jpeg" alt="Anchor & Roots Logo" class="w-full h-full object-cover">
+          <div class="w-14 h-14 rounded-full overflow-hidden p-0.5 bg-white border border-emerald-400/30 shrink-0">
+            <img src="assets/logo.jpeg" onerror="this.onerror=null; this.src='https://static.wixstatic.com/media/d49a40_84974029cc8d49faa93f68cb6c193112~mv2.jpeg';" alt="Anchor & Roots Logo" class="w-full h-full object-cover">
           </div>
           <div>
             <h4 class="font-serif text-2xl font-bold tracking-tight text-white">Anchor &amp; Roots</h4>
