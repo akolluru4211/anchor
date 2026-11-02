@@ -143,17 +143,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Ensure Hero Video Autoplays Continuously in Loop
+  // Ensure Hero Video Autoplays Continuously in Loop & Bulletproof Poster Fallback
   const heroVideo = document.getElementById('hero-bg-video');
   if (heroVideo) {
     heroVideo.muted = true;
-    heroVideo.play().catch(() => {
-      // Autoplay with muted is allowed on all modern browsers
-    });
+    heroVideo.playsInline = true;
+    heroVideo.setAttribute('playsinline', '');
+    heroVideo.setAttribute('webkit-playsinline', '');
+
+    const tryPlay = () => {
+      const playPromise = heroVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Retry on first document interaction if policy blocked initial autoplay
+          const resumeOnInteraction = () => {
+            heroVideo.play().catch(() => {});
+            document.removeEventListener('click', resumeOnInteraction);
+            document.removeEventListener('touchstart', resumeOnInteraction);
+          };
+          document.addEventListener('click', resumeOnInteraction, { once: true });
+          document.addEventListener('touchstart', resumeOnInteraction, { once: true });
+        });
+      }
+    };
+
+    tryPlay();
+
     heroVideo.addEventListener('ended', () => {
       heroVideo.currentTime = 0;
       heroVideo.play();
     });
+
+    // Poster fallback in case local assets resolve slowly
+    const posterImg = new Image();
+    posterImg.onerror = () => {
+      heroVideo.poster = 'https://static.wixstatic.com/media/d49a40_1f4860734ba94532868071f295d130ddf000.jpg';
+    };
+    posterImg.src = heroVideo.poster;
   }
 
   // Header background shade on scroll
